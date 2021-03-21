@@ -10,7 +10,6 @@ spec:
         - command:
             - ./cyclonus
             - generate
-            - --include=conflict
             - --ignore-loopback=true
             - --exclude=named-port,multi-peer,upstream-e2e,example
           name: cyclonus

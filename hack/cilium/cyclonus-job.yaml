@@ -10,7 +10,6 @@ spec:
         - command:
             - ./cyclonus
             - generate
-            - --include=conflict
             - --ignore-loopback=true
             - --server-protocol=tcp,udp
           name: cyclonus

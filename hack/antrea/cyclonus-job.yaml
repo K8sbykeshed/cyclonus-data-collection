@@ -11,6 +11,7 @@ spec:
             - ./cyclonus
             - generate
             - --perturbation-wait-seconds=15
+            - --server-protocol=tcp,udp
           name: cyclonus
           imagePullPolicy: IfNotPresent
           image: mfenwick100/cyclonus:latest

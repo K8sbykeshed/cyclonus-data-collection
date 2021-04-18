@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-#set -o errexit -o nounset -o pipefail
-set -eou pipefail
+set -o errexit -o nounset -o pipefail
 set -xv
 
 CLUSTER=${CLUSTER:-netpol-calico}
@@ -29,4 +28,4 @@ kubectl wait --for=condition=ready nodes --timeout=5m --all
 kubectl get nodes
 kubectl get all -A
 
-kubectl wait --for=condition=ready pod -l k8s-app=calico-node -n kube-system --timeout=5m
+kubectl wait --for=condition=ready pod -l k8s-app=calico-node -n kube-system

@@ -1,0 +1,16 @@
+name: Kind Calico IPv6 Cyclonus
+on:
+  workflow_dispatch:
+  schedule:
+    # At 04:00 on Sunday.
+    - cron: '0 4 * * 0'
+
+jobs:
+  test-kind-calico-ipv6:
+    name: Run Cyclonus on KinD/Calico/IPv6
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Cyclonus
+        working-directory: hack/kind
+        run: CNI=calico-ipv6 RUN_FROM_SOURCE=false ./run-cyclonus.sh
